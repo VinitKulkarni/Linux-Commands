@@ -43,6 +43,21 @@ $usermod -l oldname newname
 To set the expiery date:
 $usermod -e 20204-12-31 username
 
+FOR GROUP:
+there are two group for 1 user:
+a.realgroup(which is created during user creation)
+b.effectivegroup(groups which are part of user)
+---------------------------------
+To add user in group:
+ex1: $usermod -a -G sudo username
+(-a:append -G:effective_group -g:realgroup)
+
+ex2: $usermod -g developer username
+(current user group is removed and its replaced with developer group)
+
+To display all id's of users:
+$id
+
 To see the user all information:
 $cat /etc/passwd
 
