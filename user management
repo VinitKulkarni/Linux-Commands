@@ -1,0 +1,72 @@
+Custome Commands written in perl language, but internally uses the useradd commands:
+adduser username
+ex: $adduser test1
+
+$addgroup groupname
+ex:$addgroup testgroup
+
+$deluser username
+ex:$deluser test1
+
+$delgroup groupname
+ex:$delgroup testgroup
+-------------------------
+These are system commands:
+useradd
+groupadd
+userdel
+groupdel
+--------------------------
+
+users: logged in user list in system
+groups: the user in which group
+
+usermod: modify the user accounts
+--------------------------
+question:
+create simple user
+try to run this one as root
+add it in sudo group
+create a new group
+uppend the user to that group
+see which group the user presents
+change the password of a user
+remove all group only allow sudo group
+--------------------------
+usermod:
+To create home directory of user:
+$usermod -d /home/dir/of/user username
+To change the shell:
+$usermod -s /bin/bash username
+To change username to new username:
+$usermod -l oldname newname
+To set the expiery date:
+$usermod -e 20204-12-31 username
+
+To see the user all information:
+$cat /etc/passwd
+
+To change the password:
+$passwd username
+
+To change the shell:
+$chsh -s /bin/bash username
+
+
+
+-----------------
+commands summary:
+adduser
+addgroup
+deleteuser
+deletegroup
+---------------
+useradd
+groupadd
+userdel
+groupdel
+---------------
+usermod
+---------------
+su -
+su user
